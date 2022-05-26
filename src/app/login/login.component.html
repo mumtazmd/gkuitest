@@ -1,0 +1,42 @@
+
+<section class="bg_img w-100 h-100 d-flex align-items-center">
+<div class="cover-container w-100 d-flex p-3 mx-auto">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <div class="login-wrapper">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="p-4 p-md-5 border rounded-3 bg-light">
+                <div class="login-group">
+                    <div class="form-floating mb-3">
+                        <input required class="form-control rounded-3" 
+                        name="email" 
+                        [(ngModel)]="user.email" 
+                        type="text" 
+                        id="login_username" 
+                        placeholder="Email">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input required class="form-control rounded-3" 
+                      name="password" 
+                      [(ngModel)]="user.password" 
+                      type="password" 
+                      id="login_password" 
+                      placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                      </div>
+                   
+                    
+                    
+                    
+                    <button type="submit" 
+                      class="w-100 btn btn-lg btn-primary"
+                      [disabled]="loginForm.form.invalid">
+                        Login
+                    </button>
+                 </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+</section>
